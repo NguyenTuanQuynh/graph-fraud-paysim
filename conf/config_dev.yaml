@@ -1,0 +1,19 @@
+app_name: graph-fraud-paysim-dev
+master: local[2]
+
+paths:
+  raw_csv: data/raw/paysim.csv
+  bronze: data/bronze/paysim_parquet
+  silver_dev: data/silver/paysim_dev_subset
+  vertices_dev: data/graph/dev_vertices
+  edges_dev: data/graph/dev_edges
+
+dev:
+  min_step: 1
+  max_step: 24
+
+spark:
+  shuffle_partitions: 4
+  log_level: WARN
+  driver_memory: 6g
+  

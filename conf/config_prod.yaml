@@ -1,0 +1,20 @@
+app_name: graph-fraud-paysim-prod
+master: local[*]
+
+paths:
+  raw_csv: data/raw/paysim.csv
+  bronze: data/bronze/paysim_parquet
+  silver_dev: data/silver/paysim_dev_subset
+  vertices: data/graph/vertices
+  edges: data/graph/edges
+  tabular_features: data/features/tabular_features
+  graph_features: data/features/graph_features
+  train_dataset: data/train/train_dataset
+  reports: data/reports
+
+dev:
+  min_step: 1
+  max_step: 744
+
+spark:
+  shuffle_partitions: 32
