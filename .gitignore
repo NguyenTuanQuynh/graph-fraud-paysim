@@ -205,3 +205,46 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VSCode
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Spark / logs
+logs/
+spark-warehouse/
+metastore_db/
+derby.log
+
+# Data files
+data/raw/*
+data/bronze/*
+data/silver/*
+data/graph/*
+data/features/*
+data/train/*
+data/reports/*
+
+# Keep folder structure
+!data/raw/.gitkeep
+!data/bronze/.gitkeep
+!data/silver/.gitkeep
+!data/graph/.gitkeep
+!data/features/.gitkeep
+!data/train/.gitkeep
+!data/reports/.gitkeep
