@@ -27,6 +27,13 @@ pagerank:
   damping: 0.85
   max_iter: 10
 
+scaling:
+  step_max_values: [24]
+  masters: ["local[1]", "local[2]"]
+  shuffle_partitions:
+    local[1]: 2
+    local[2]: 4
+
 spark:
   shuffle_partitions: 4
   log_level: WARN

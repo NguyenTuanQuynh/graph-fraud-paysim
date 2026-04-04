@@ -167,7 +167,8 @@ def main(config_path: str) -> None:
 
     dataset_path = resolve_path(PROJECT_ROOT, cfg["paths"]["training_dataset_dev"])
     reports_path = resolve_path(PROJECT_ROOT, cfg["paths"]["reports"])
-
+    Path(reports_path).mkdir(parents=True, exist_ok=True)
+    
     train_max_step = int(cfg["split"]["train_max_step"])
     val_max_step = int(cfg["split"]["val_max_step"])
 
