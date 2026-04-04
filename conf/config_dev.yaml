@@ -7,13 +7,27 @@ paths:
   silver_dev: data/silver/paysim_dev_subset
   vertices_dev: data/graph/dev_vertices
   edges_dev: data/graph/dev_edges
+  tabular_features_dev: data/features/dev_tabular_features
+  degree_features_dev: data/features/dev_degree_features
+  pagerank_nodes_dev: data/features/dev_pagerank_nodes
+  pagerank_features_dev: data/features/dev_pagerank_features
+  training_dataset_dev: data/train/dev_training_dataset
+  reports: data/reports
 
 dev:
   min_step: 1
   max_step: 24
 
+split:
+  train_max_step: 16
+  val_max_step: 20
+  test_max_step: 24
+
+pagerank:
+  damping: 0.85
+  max_iter: 10
+
 spark:
   shuffle_partitions: 4
   log_level: WARN
-  driver_memory: 6g
-  
+  driver_memory: 4g
