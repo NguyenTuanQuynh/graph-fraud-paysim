@@ -232,6 +232,7 @@ metastore_db/
 derby.log
 
 # Data files
+data/raw/*.csv
 data/raw/*
 data/bronze/*
 data/silver/*
